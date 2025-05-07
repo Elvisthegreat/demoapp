@@ -10,13 +10,16 @@
             <td>{{ product.name }}</td>
         </tr>
         <tr>
-            <th>Price</th>
+            <th>Description</th>
             <td>{{ product.description }}</td>
         </tr>
         <tr>
-            <th>Description</th>
+            <th>Size</th>
             <td>{{ product.size }}</td>
         </tr>
     </tbody>
 </table>
+
+<a href="{{ path('product_edit', {'id': product.id}) }}">Edit</a>
+<a href="{{ path('product_delete', {'id': product.id}) }}">Delete</a>
 {% endblock %}
